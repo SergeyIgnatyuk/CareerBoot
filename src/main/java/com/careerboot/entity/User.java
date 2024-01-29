@@ -1,2 +1,10 @@
-package com.careerboot.entity;public class User {
+package com.careerboot.entity;
+
+import lombok.Data;
+
+@Data
+public class User {
+    private Long id;
+    private String username;
+    private String password;
 }
