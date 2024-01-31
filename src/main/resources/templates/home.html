@@ -1,10 +1,249 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Boot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&family=Montserrat:wght@500;700&family=Open+Sans:wght@300;400&family=Raleway:wght@700&display=swap">
+    <link rel="stylesheet" th:href="@{/css/reset.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
-$END$
+<header class="header" th:fragment="header">
+    <div class="header__top">
+        <div class="container">
+            <div class="header__top__inner">
+                <a class="logo" href="#">
+                    Cucumberries
+                </a>
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="#">
+                                HOME
+                            </a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="#">
+                                ABOUT US
+                            </a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="#">
+                                PRODUCT
+                            </a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="#">
+                                OUR TEAM
+                            </a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="#">
+                                BLOG
+                            </a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="#">
+                                CONTACT
+                            </a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="#">
+                                MY ACCOUNT
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="header__content">
+        <div class="container">
+            <div class="header__content-inner">
+                <h1 class="header__title">
+                    O...CUCUMBER
+                </h1>
+                <h4 class="header__subtitle">
+                    CREATE THE BEST WEB APP
+                </h4>
+                <a class="header__icon" href="#">
+                    <img th:src="@{/img/mouse.png}" alt="mouse icon">
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="about">
+    <div class="container">
+        <div class="about__inner">
+            <h2 class="title">About Us</h2>
+            <div class="about__text">
+                <p>
+                    Our company, Cucumberries, is a leading software development firm that proudly developed this
+                    cutting-edge web application. With a team of highly skilled developers, designers, and engineers, we
+                    focused on creating a user-friendly platform that simplifies CV creation. Our expertise lies in
+                    harnessing the latest technologies and innovative approaches to deliver a seamless experience for
+                    users of all backgrounds. We are committed to empowering job seekers by providing them with a
+                    powerful tool to showcase their skills and qualifications effectively.
+                    recruiters, hiring managers and even CEOs.
+                </p>
+                <p>
+                    At Cucumberries, we prioritize customer satisfaction and continuously strive to improve our
+                    products.
+                    The development of this web app exemplifies our dedication to excellence and staying ahead of
+                    industry trends. Our goal is to revolutionize the way CVs are crafted, ensuring that our users stand
+                    out in competitive job markets. As a forward-thinking company, we are excited to continue pushing
+                    the boundaries of technology and making a positive impact on individuals' career paths.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="expertise">
+    <div class="container">
+        <h2 class="title expertise__title">Our Expertise</h2>
+        <div class="expertise__inner">
+            <div class="expertise__info">
+                <div class="expertise__info-item">
+                    BRANDING
+                    <span style="width: calc(100% - 85%)">85%</span>
+                </div>
+                <div class="expertise__info-item">
+                    DESIGN
+                    <span style="width: calc(100% - 80%)">80%</span>
+                </div>
+                <div class="expertise__info-item">
+                    DEVELOPMENT
+                    <span style="width: calc(100% - 90%)">90%</span>
+                </div>
+            </div>
+            <div class="expertise__text">
+                <p>
+                    Our company simplifies the process of getting a custom web app or site. With a user-friendly
+                    platform, customers can order tailored digital solutions effortlessly. Our expert team transforms
+                    ideas into functional, visually appealing websites and applications, delivering a seamless online
+                    experience. Elevate your online presence with us today!
+                </p>
+                <p>
+                    Another exceptional aspect of the web application lies in its ability to adapt to the ever-changing
+                    job market and industry requirements.
+                </p>
+            </div>
+        </div>
+        <div class="expertise__items">
+            <div class="expertise__item expertise__item--design">
+                <h4 class="expertise__item-title">
+                    GRAPHIC DESIGN
+                </h4>
+                <p class="expertise__item-text">Graphic design combines art and communication to visually convey
+                    messages, ideas, and information in
+                    a creative and impactful manner.
+                </p>
+            </div>
+            <div class="expertise__item expertise__item--dev">
+                <h4 class="expertise__item-title">
+                    WEB DEVELOPMENT
+                </h4>
+                <p class="expertise__item-text">Web development involves building and maintaining websites and web
+                    applications using programming
+                    languages, databases, and other web technologies.
+                </p>
+            </div>
+            <div class="expertise__item expertise__item--marketing">
+                <h4 class="expertise__item-title">
+                    MARKETING
+                </h4>
+                <p class="expertise__item-text">
+                    Marketing encompasses various strategies and activities aimed at promoting products or services,
+                    attracting customers, and building brand awareness and loyalty.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="magic">
+    <div class="container">
+        <div class="magic__inner">
+            <h2 class="title magic__title">
+                Let's make magic.
+            </h2>
+            <div class="magic__text">
+                <p>
+                    Cucumberries is a vibrant web design and development studio, known for its innovative approach to
+                    crafting online experiences. With a team of talented professionals, Cucumberries specializes in
+                    creating visually appealing and user-friendly websites that cater to the unique needs of businesses
+                    and individuals.
+                </p>
+                <p>
+                    At Cucumberries, we prioritize creativity and functionality, ensuring that every website we produce
+                    not only looks stunning but also performs seamlessly. Our expertise spans across various industries,
+                    from e-commerce and corporate websites to personal blogs and portfolios. We believe in the power of
+                    responsive design, making sure that your site looks great on all devices, from desktop computers to
+                    smartphones and tablets.
+                </p>
+                <p>
+                    Speak to business in the same language!
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="portfolio">
+    <div class="container">
+        <div class="portfolio__top">
+            <h2 class="title">
+                Portfolio
+            </h2>
+            <div class="portfolio__filter-btn">
+                <button class="portfolio__btn">All</button>
+                <button class="portfolio__btn">BRANDING</button>
+                <button class="portfolio__btn">DESIGN PHOTOGRAPHY</button>
+                <button class="portfolio__btn">PHOTOGRAPHY</button>
+                <button class="portfolio__btn">ILLUSTRATION</button>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio__content">
+        <div class="portfolio__item">
+            <img th:src="@{/img/mouse.png}" alt="portfolio images">
+        </div>
+        <div class="portfolio__item">
+            <img th:src="@{/img/mouse.png}" alt="portfolio images">
+        </div>
+        <div class="portfolio__item">
+            <img th:src="@{/img/mouse.png}" alt="portfolio images">
+        </div>
+        <div class="portfolio__item">
+            <img th:src="@{/img/mouse.png}" alt="portfolio images">
+        </div>
+        <div class="portfolio__item">
+            <img th:src="@{/img/mouse.png}" alt="portfolio images">
+        </div>
+        <div class="portfolio__item">
+            <img th:src="@{/img/mouse.png}" alt="portfolio images">
+        </div>
+        <div class="portfolio__item">
+            <img th:src="@{/img/mouse.png}" alt="portfolio images">
+        </div>
+        <div class="portfolio__item">
+            <img th:src="@{/img/mouse.png}" alt="portfolio images">
+        </div>
+        <div class="portfolio__item">
+            <img th:src="@{/img/mouse.png}" alt="portfolio images">
+        </div>
+    </div>
+    <a class="portfolio__add" href="#"></a>
+    <blockquote class="blockquote">
+        "no matter what story you tell, the main thing is to make your customer the hero"
+        <span class="blockquote__author">Chris Brogan</span>
+    </blockquote>
+</section>
 </body>
 </html>

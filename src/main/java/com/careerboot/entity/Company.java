@@ -3,5 +3,7 @@ package com.careerboot.entity;
 import lombok.Data;
 
 @Data
-public class Customer {
+public class Company {
+    private Long id;
+    private String name;
 }

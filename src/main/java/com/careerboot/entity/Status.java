@@ -1,2 +1,9 @@
-package com.careerboot.entity;public class Status {
+package com.careerboot.entity;
+
+import lombok.Data;
+
+@Data
+public class Status {
+    private Long id;
+    private String name;
 }
