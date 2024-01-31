@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&family=Montserrat:wght@500;700&family=Open+Sans:wght@300;400&family=Raleway:wght@700&display=swap">
+    <link rel="stylesheet" th:href="@{/css/reset.css}">
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+<body>
+<div class="auth-container">
+    <div class="login-container">
+        <h2 class="title">login</h2>
+        <form method="post" th:action="@{/login}" class="form">
+            <div class="form-group">
+                <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password"
+                       required>
+            </div>
+            <div class="btn__wrapper">
+                <button type="submit" class="btn__login">Login</button>
+            </div>
+        </form>
+    </div>
+    <div class="register-container">
+        <p>New here? Click
+            <a th:href="@{/register}">here</a> to register.
+        </p>
+    </div>
+</div>
+</body>
+</html>

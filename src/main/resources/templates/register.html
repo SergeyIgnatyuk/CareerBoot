@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&family=Montserrat:wght@500;700&family=Open+Sans:wght@300;400&family=Raleway:wght@700&display=swap">
+    <link rel="stylesheet" th:href="@{/css/reset.css}">
+    <link rel="stylesheet" th:href="@{/css/register.css}">
+</head>
+<body>
+<form method="POST" th:action="@{/register}" id="registerForm">
+    <label for="username">Username: </label>
+    <input type="text" name="username" id="username"/><br/>
+    <label for="password">Password: </label>
+    <input type="password" name="password" id="password"/><br/>
+    <label for="confirm">Confirm password: </label>
+    <input type="password" name="confirm" id="confirm"/><br/>
+    <label for="fullname">Full name: </label>
+    <input type="text" name="fullname" id="fullname"/><br/>
+    <label for="street">Street: </label>
+    <input type="text" name="street" id="street"/><br/>
+    <label for="city">City: </label>
+    <input type="text" name="city" id="city"/><br/>
+    <label for="state">State: </label>
+    <input type="text" name="state" id="state"/><br/>
+    <label for="zip">Zip: </label>
+    <input type="text" name="zip" id="zip"/><br/>
+    <label for="phone">Phone: </label>
+    <input type="text" name="phone" id="phone"/><br/>
+    <input type="submit" value="Register"/>
+</form>
+</body>
+</html>
