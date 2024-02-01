@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/careerboot
+    username: root
+    password: root
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+  flyway:
+    url: jdbc:postgresql://localhost:5432/careerboot
+    locations: classpath:db/migration
+    enabled: true
+    user: root
+    password: root
+
+  thymeleaf:
+    cache: false
+
+

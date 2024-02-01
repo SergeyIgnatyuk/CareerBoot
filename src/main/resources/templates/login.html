@@ -16,7 +16,7 @@
 <div class="auth-container">
     <div class="login-container">
         <h2 class="title">login</h2>
-        <form method="post" th:action="@{/login}" class="form">
+        <form method="post" th:action="@{/auth/login}" class="form">
             <div class="form-group">
                 <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
             </div>
@@ -31,7 +31,7 @@
     </div>
     <div class="register-container">
         <p>New here? Click
-            <a th:href="@{/register}">here</a> to register.
+            <a th:href="@{/users/register}">here</a> to register.
         </p>
     </div>
 </div>
