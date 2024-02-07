@@ -1,0 +1,2 @@
+INSERT INTO users (email,password,first_name,last_name,role,enabled,created_at,updated_at)
+values ('signatuk89@gmail.com', '$2a$12$vSdXQbp5r6T9i8NCtpxDT.RjpldRL68qjblvmMVH8drMhHDNDUDRi','Sergey','Ignatyuk','ADMIN',true,current_timestamp,current_timestamp)
