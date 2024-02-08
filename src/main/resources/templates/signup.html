@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&family=Montserrat:wght@500;700&family=Open+Sans:wght@300;400&family=Raleway:wght@700&display=swap">
+    <link rel="stylesheet" th:href="@{/css/reset.css}">
+    <link rel="stylesheet" th:href="@{/css/sign.css}">
+</head>
+<body>
+<div class="auth-container">
+    <div class="login-container">
+        <h2 class="title">signup</h2>
+        <form method="post" th:action="@{/users/signup}" th:object="${user}" class="form">
+            <div class="form-group">
+                <input th:field="*{email}" type="text" name="email" class="form-control" id="email" placeholder="email" required/>
+            </div>
+            <div class="form-group">
+                <input th:field="*{password}" type="password" class="form-control" id="password" name="password" placeholder="password" required>
+            </div>
+            <div class="form-group">
+                <input th:field="*{confirmPassword}" type="password" name="confirm" class="form-control" id="confirm" placeholder="confirm password" required/>
+            </div>
+            <div class="form-group">
+                <input th:field="*{firstName}" type="text" name="firstName" class="form-control" id="firstName" placeholder="first name" required/>
+            </div>
+            <div class="form-group">
+                <input th:field="*{lastName}" type="text" name="lastName" class="form-control" id="lastName" placeholder="last name" required/>
+            </div>
+            <div class="btn__wrapper">
+                <button type="submit" class="btn__submit">submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

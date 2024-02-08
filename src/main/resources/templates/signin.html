@@ -10,28 +10,27 @@
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&family=Montserrat:wght@500;700&family=Open+Sans:wght@300;400&family=Raleway:wght@700&display=swap">
     <link rel="stylesheet" th:href="@{/css/reset.css}">
-    <link rel="stylesheet" th:href="@{/css/login.css}">
+    <link rel="stylesheet" th:href="@{/css/sign.css}">
 </head>
 <body>
 <div class="auth-container">
     <div class="login-container">
-        <h2 class="title">login</h2>
-        <form method="post" th:action="@{/auth/login}" class="form">
+        <h2 class="title">signin</h2>
+        <form method="post" th:action="@{/auth/signin}" class="form">
             <div class="form-group">
-                <input type="text" class="form-control" id="username" name="username" placeholder="Email" required>
+                <input type="text" class="form-control" id="username" name="username" placeholder="email" required>
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" id="password" name="password" placeholder="Password"
-                       required>
+                <input type="password" class="form-control" id="password" name="password" placeholder="password" required>
             </div>
             <div class="btn__wrapper">
-                <button type="submit" class="btn__login">Login</button>
+                <button type="submit" class="btn__submit">submit</button>
             </div>
         </form>
     </div>
     <div class="register-container">
         <p>New here? Click
-            <a th:href="@{/register}">here</a> to register.
+            <a th:href="@{/users/signup}">here</a> to register.
         </p>
     </div>
 </div>

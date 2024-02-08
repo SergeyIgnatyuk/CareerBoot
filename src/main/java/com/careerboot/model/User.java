@@ -20,23 +20,23 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "email")
+    @Column(name = "email", nullable = false)
     private String email;
 
-    @Column(name = "password")
+    @Column(name = "password", nullable = false)
     private String password;
 
-    @Column(name = "first_name")
+    @Column(name = "first_name", nullable = false)
     private String firstName;
 
-    @Column(name = "last_name")
+    @Column(name = "last_name", nullable = false)
     private String lastName;
 
     @Enumerated(value = EnumType.STRING)
-    private Role role;
+    private Role role = Role.USER;
 
     @Type(type = "org.hibernate.type.BooleanType")
-    private boolean enabled;
+    private boolean enabled = true;
 
     @Basic
     @Column(name = "created_at")
@@ -47,6 +47,9 @@ public class User {
     @Column(name = "updated_at")
     @UpdateTimestamp
     private LocalDateTime updatedAt;
+
+    @Transient
+    private String confirmPassword;
 
     @ToString.Include(name = "password")
     private String maskPassword() {
