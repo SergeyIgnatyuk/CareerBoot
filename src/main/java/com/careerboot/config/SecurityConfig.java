@@ -31,14 +31,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/", "/auth/signup", "/css/**", "/img/**", "/js/**").permitAll()
+                .antMatchers("/", "/auth/**", "/css/**", "/img/**", "/js/**").permitAll()
                 .antMatchers(HttpMethod.GET, "/workbench").hasAuthority("users:read")
                 .antMatchers(HttpMethod.GET, "/users/**").hasAuthority("users:write")
                 .anyRequest()
                 .authenticated()
                 .and()
                 .formLogin()
-                .loginPage("/auth/signin").permitAll()
+                .loginPage("/auth/signin")
                 .defaultSuccessUrl("/workbench")
                 .and()
                 .logout()
