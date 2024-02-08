@@ -1,16 +1,14 @@
 package com.careerboot.model;
 
+import com.careerboot.validation.ValidPassword;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 import java.time.LocalDateTime;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -23,12 +21,11 @@ public class User {
     private Long id;
 
     @NotBlank(message = "user email is required")
-    @Pattern(regexp = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$", message = "wrong email format")
+    @Email(message = "wrong email format")
     @Column(name = "email", nullable = false)
     private String email;
 
-    @NotBlank(message = "user password is required")
-    @Size(min = 8, message = "password must be at least 8 characters long")
+    @ValidPassword
     @Column(name = "password", nullable = false)
     private String password;
 
@@ -56,8 +53,6 @@ public class User {
     @UpdateTimestamp
     private LocalDateTime updatedAt;
 
-    @NotBlank(message = "user password is required")
-    @Size(min = 8, message = "password must be at least 8 characters long")
     @Transient
     private String confirmPassword;
 

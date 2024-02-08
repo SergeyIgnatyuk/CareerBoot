@@ -31,15 +31,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/", "/users/signup", "/css/**", "/img/**", "/js/**").permitAll()
-                .antMatchers(HttpMethod.GET, "/users/workbench").hasAuthority("users:read")
+                .antMatchers("/", "/auth/signup", "/css/**", "/img/**", "/js/**").permitAll()
+                .antMatchers(HttpMethod.GET, "/workbench").hasAuthority("users:read")
                 .antMatchers(HttpMethod.GET, "/users/**").hasAuthority("users:write")
                 .anyRequest()
                 .authenticated()
                 .and()
                 .formLogin()
                 .loginPage("/auth/signin").permitAll()
-                .defaultSuccessUrl("/users/workbench")
+                .defaultSuccessUrl("/workbench")
                 .and()
                 .logout()
                 .logoutSuccessUrl("/")
