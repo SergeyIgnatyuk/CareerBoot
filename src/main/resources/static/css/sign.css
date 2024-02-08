@@ -82,3 +82,7 @@ body {
 input:focus {
     outline: solid 2px #FDDA0E;
 }
+
+.validationError {
+    color: #FCBB08;
+}

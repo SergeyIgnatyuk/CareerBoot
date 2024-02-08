@@ -8,7 +8,11 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+
 @Data
 @AllArgsConstructor
 @Slf4j
@@ -25,7 +29,10 @@ public class UserController {
     }
 
     @PostMapping("/signup")
-    public String registerNewUser(@ModelAttribute User user) {
+    public String registerNewUser(@ModelAttribute @Valid User user, Errors errors) {
+        if (errors.hasErrors()) {
+            return "signup";
+        }
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         userRepository.save(user);
         return "redirect:/auth/signin";

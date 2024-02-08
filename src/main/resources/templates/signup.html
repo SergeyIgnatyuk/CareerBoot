@@ -18,19 +18,24 @@
         <h2 class="title">signup</h2>
         <form method="post" th:action="@{/users/signup}" th:object="${user}" class="form">
             <div class="form-group">
-                <input th:field="*{email}" type="text" name="email" class="form-control" id="email" placeholder="email" required/>
+                <input th:field="*{email}" type="text" name="email" class="form-control" id="email" placeholder="email"/>
+                <span class="validationError" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email Error</span>
             </div>
             <div class="form-group">
-                <input th:field="*{password}" type="password" class="form-control" id="password" name="password" placeholder="password" required>
+                <input th:field="*{password}" type="password" class="form-control" id="password" name="password" placeholder="password">
+                <span class="validationError" th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Email Error</span>
             </div>
             <div class="form-group">
-                <input th:field="*{confirmPassword}" type="password" name="confirm" class="form-control" id="confirm" placeholder="confirm password" required/>
+                <input th:field="*{confirmPassword}" type="password" name="confirm" class="form-control" id="confirm" placeholder="confirm password"/>
+                <span class="validationError" th:if="${#fields.hasErrors('confirmPassword')}" th:errors="*{confirmPassword}">Email Error</span>
             </div>
             <div class="form-group">
-                <input th:field="*{firstName}" type="text" name="firstName" class="form-control" id="firstName" placeholder="first name" required/>
+                <input th:field="*{firstName}" type="text" name="firstName" class="form-control" id="firstName" placeholder="first name"/>
+                <span class="validationError" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">Email Error</span>
             </div>
             <div class="form-group">
-                <input th:field="*{lastName}" type="text" name="lastName" class="form-control" id="lastName" placeholder="last name" required/>
+                <input th:field="*{lastName}" type="text" name="lastName" class="form-control" id="lastName" placeholder="last name"/>
+                <span class="validationError" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">Email Error</span>
             </div>
             <div class="btn__wrapper">
                 <button type="submit" class="btn__submit">submit</button>
