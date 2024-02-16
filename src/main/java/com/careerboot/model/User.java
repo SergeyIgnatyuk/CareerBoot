@@ -2,11 +2,11 @@ package com.careerboot.model;
 
 import com.careerboot.validation.ValidPassword;
 import lombok.*;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.Type;
-import org.hibernate.annotations.UpdateTimestamp;
+import org.hibernate.annotations.*;
 
 import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import javax.validation.constraints.*;
 import java.time.LocalDateTime;
 @Data
@@ -15,6 +15,8 @@ import java.time.LocalDateTime;
 @Builder
 @Entity
 @Table(name = "users")
+@DynamicInsert
+@DynamicUpdate
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -43,12 +45,10 @@ public class User {
     @Type(type = "org.hibernate.type.BooleanType")
     private boolean enabled = true;
 
-    @Basic
     @Column(name = "created_at")
     @CreationTimestamp
     private LocalDateTime createdAt;
 
-    @Basic
     @Column(name = "updated_at")
     @UpdateTimestamp
     private LocalDateTime updatedAt;
