@@ -3,7 +3,6 @@ package com.careerboot.controller;
 import com.careerboot.model.User;
 import com.careerboot.repository.UserRepository;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -14,7 +13,6 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.Objects;
 
-@Data
 @AllArgsConstructor
 @Slf4j
 @Controller

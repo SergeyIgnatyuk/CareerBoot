@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  careerboot_app:
+    container_name: careerboot_app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - careerboot_db
+
+  careerboot_db:
+    container_name: careerboot_db
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: careerboot
