@@ -68,6 +68,11 @@
                                 WORKBENCH
                             </a>
                         </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="/workbench">
+                                MY ACCOUNT
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -80,8 +85,6 @@
             <thead>
             <tr>
                 <th>ID</th>
-                <th>First Name</th>
-                <th>Last Name</th>
                 <th>Email</th>
                 <th>Role</th>
                 <th>Enabled</th>
@@ -92,8 +95,6 @@
             <tbody>
             <tr th:each="user : ${users}">
                 <td th:text="${user.id}"></td>
-                <td th:text="${user.firstName}"></td>
-                <td th:text="${user.lastName}"></td>
                 <td th:text="${user.email}"></td>
                 <td th:text="${user.role}"></td>
                 <td th:text="${user.enabled} ? 'Yes' : 'No'"></td>

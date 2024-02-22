@@ -31,14 +31,6 @@ public class User {
     @Column(name = "password", nullable = false)
     private String password;
 
-    @NotBlank(message = "user first name is required")
-    @Column(name = "first_name", nullable = false)
-    private String firstName;
-
-    @NotBlank(message = "user last name is required")
-    @Column(name = "last_name", nullable = false)
-    private String lastName;
-
     @Enumerated(value = EnumType.STRING)
     private Role role = Role.USER;
 
@@ -55,6 +47,11 @@ public class User {
 
     @Transient
     private String confirmPassword;
+
+    @Embedded
+    private Passport passport;
+
+    private String phone;
 
     @ToString.Include(name = "password")
     private String maskPassword() {

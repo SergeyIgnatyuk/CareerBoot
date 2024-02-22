@@ -1,2 +1,2 @@
-INSERT INTO users (email,password,first_name,last_name,role,enabled,created_at,updated_at)
-values ('signatuk89@gmail.com', '$2a$12$YyjJ2S/C84JuOvRWrrQr6u3JjRlau5Lf1bey..TBjbFUiBB3R14hG','Sergey','Ignatyuk','ADMIN',true,current_timestamp,current_timestamp)
+INSERT INTO users (email,password,user_passport_first_name,user_passport_last_name,role,enabled,created_at,updated_at,phone)
+values ('signatuk89@gmail.com', '$2a$12$Aly0PHx/88hwg0/DxrKto.wYozUSDWgrjztcrHP1qTUm6ApD1EJAm','SIARHEI','IHNATSIUK','ADMIN',true,current_timestamp,current_timestamp,'+375295326531')
